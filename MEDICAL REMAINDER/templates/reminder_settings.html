@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Reminder Settings</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+    <style>
+
+        body{
+            margin:0;
+            padding:0;
+            font-family:Arial, sans-serif;
+            background:#f4f8fc;
+        }
+
+        .header{
+            background:#1565C0;
+            color:white;
+            text-align:center;
+            padding:20px;
+        }
+
+        .container{
+            width:90%;
+            max-width:700px;
+            margin:40px auto;
+        }
+
+        .card{
+            background:white;
+            padding:30px;
+            border-radius:12px;
+            box-shadow:0 4px 10px rgba(0,0,0,0.2);
+        }
+
+        h2{
+            text-align:center;
+            color:#1565C0;
+            margin-bottom:30px;
+        }
+
+        label{
+            display:block;
+            font-weight:bold;
+            margin-top:15px;
+            margin-bottom:8px;
+        }
+
+        input,
+        select{
+            width:100%;
+            padding:12px;
+            font-size:16px;
+            border:1px solid #ccc;
+            border-radius:6px;
+            box-sizing:border-box;
+        }
+
+        .button{
+            width:100%;
+            margin-top:25px;
+            padding:14px;
+            background:#1565C0;
+            color:white;
+            border:none;
+            border-radius:8px;
+            font-size:18px;
+            cursor:pointer;
+        }
+
+        .button:hover{
+            background:#0D47A1;
+        }
+
+        .back{
+            display:block;
+            text-align:center;
+            margin-top:20px;
+            text-decoration:none;
+            color:#1565C0;
+            font-weight:bold;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+<div class="header">
+    <h1>💊 AI Medical Reminder</h1>
+</div>
+
+<div class="container">
+
+<div class="card">
+
+<h2>⏰ Reminder Settings</h2>
+
+<form method="POST">
+
+<label>Reminder Status</label>
+
+<select name="status">
+    <option>Enabled</option>
+    <option>Disabled</option>
+</select>
+
+<label>Reminder Sound</label>
+
+<select name="sound">
+    <option>Default</option>
+    <option>Beep</option>
+    <option>Bell</option>
+</select>
+
+<label>Notification Interval</label>
+
+<select name="interval">
+    <option>Every 1 Minute</option>
+    <option>Every 5 Minutes</option>
+    <option>Every 10 Minutes</option>
+</select>
+
+<input type="submit" value="Save Settings" class="button">
+
+</form>
+
+<a href="/dashboard" class="back">
+🏠 Back to Dashboard
+</a>
+
+</div>
+
+</div>
+
+</body>
+</html>
